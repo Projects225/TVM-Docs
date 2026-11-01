@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TVM Rules & Acronyms</title>
-    <!-- Načítanie knižnice Marked.js -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script>
     <style>
         body {
             background-color: #121212;
@@ -45,22 +44,39 @@
 </head>
 <body>
 
-    <!-- Miesto, kam sa vykreslí obsah -->
     <div id="content">Načítavam obsah...</div>
 
     <script>
-        // Načítanie externého .md súboru cez fetch (funguje spoľahlivo aj na GitHub Pages)
-        fetch('content.md')
-            .then(response => {
-                if (!response.ok) throw new Error('Nepodarilo sa načítať content.md');
-                return response.text();
-            })
-            .then(markdownText => {
-                document.getElementById('content').innerHTML = marked.parse(markdownText);
-            })
-            .catch(error => {
-                document.getElementById('content').innerHTML = '<p style="color: red;">Chyba: ' + error.message + '</p>';
-            });
+        function renderMarkdown() {
+            if (typeof marked === 'undefined') {
+                document.getElementById('content').innerHTML = '<p style="color: red;">Chyba: Knižnicu Marked sa nepodarilo načítať.</p>';
+                return;
+            }
+
+            fetch('content.md')
+                .then(response => {
+                    if (!response.ok) throw new Error('Nepodarilo sa načítať content.md (Status: ' + response.status + ')');
+                    return response.text();
+                })
+                .then(markdownText => {
+                    document.getElementById('content').innerHTML = marked.parse(markdownText);
+                })
+                .catch(error => {
+                    document.getElementById('content').innerHTML = '<p style="color: red;">Chyba: ' + error.message + '</p>';
+                });
+        }
+
+        if (typeof marked === 'undefined') {
+            const fallbackScript = document.createElement('script');
+            fallbackScript.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
+            fallbackScript.onload = renderMarkdown;
+            fallbackScript.onerror = function() {
+                document.getElementById('content').innerHTML = '<p style="color: red;">Chyba: Nepodarilo sa načítať Marked.js ani zo záložného zdroja.</p>';
+            };
+            document.head.appendChild(fallbackScript);
+        } else {
+            renderMarkdown();
+        }
     </script>
 
 </body>
