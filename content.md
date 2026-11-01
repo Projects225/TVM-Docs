@@ -53,7 +53,7 @@ Update: 30.10.2026
 | 📺 | **<span style="color:orange;">TL</span>** | **<span style="color:orange;">Too Long (TVShow with 5 season or longer)</span>** |
 | 📺 | **<span style="color:orange;">CW</span>** | **<span style="color:orange;">Currently Watching</span>** |
 | ♻️ | **<span style="color:#00ff00;">TN</span>** | **<span style="color:#00ff00;">Too New</span>** |
-| ♻️ | **<span style="color:#00ff00;">WP:</span>** | **<span style="color:#00ff00;">Watch Priority</span> <span style="color:#FF0000;">(Highest - 1 -</span> <span style="color:#FFA700;">2 -</span> <span style="color:#FFF400;">3 -</span> <span style="color:#A3FF00;">4 -</span> <span style="color:#2CBA00;">5 - Lowest)</span>** |
+| ♻️ | **<span style="color:#00ff00;">WP:</span>** | **<span style="color:#00ff00;">Watch Priority</span> <span style="color:#FF0000">(Highest - 1 -</span> <span style="color:#FFA700;">2 -</span> <span style="color:#FFF400;">3 -</span> <span style="color:#A3FF00;">4 -</span> <span style="color:#2CBA00;">5 - Lowest)</span>** |
 | ♻️ | **<span style="color:#00ff00;">P-</span>** | **<span style="color:#00ff00;">Title is not on Prehraj.to</span>** |
 | ♻️ | **<span style="color:#00ff00;">R:</span>** | **<span style="color:#00ff00;">Release Date</span>** |
 | ♻️ | **<span style="color:#00ff00;">NFW</span>** | **<span style="color:#00ff00;">Not Fully Watched</span>** |
