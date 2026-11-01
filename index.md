@@ -1,8 +1,14 @@
-<!-- Použitie štýlov (CSS) - Odporúčané -->
-<span style="font-size: 20px;">Tento text má veľkosť 20px</span>
-<span style="font-size: 80%;">Tento text je o 20% menší</span>
-<span style="font-size: 1.5em;">Tento text je 1.5x väčší</span>
+---
+layout: default
+title: Moja GitHub Stránka
+---
 
-<!-- Starší spôsob cez HTML tag font -->
-<font size="5">Veľký text</font>
-<font size="2">Malý text</font>
+# Vitajte na mojej stránke
+
+Toto je štandardný text napísaný v Markdown syntaxi.
+
+## Sekcia 1
+* Položka 1
+* Položka 2
+
+> Krátky citát alebo zvýraznený blok textu.
