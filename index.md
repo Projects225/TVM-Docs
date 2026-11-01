@@ -3,7 +3,21 @@ layout: default
 title: TVM Rules & Acronyms
 ---
 
-<link rel="stylesheet" href="./assets/css/style.css">
+<style>
+.markdown-body {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.markdown-body table {
+  background-color: #1e1e1e !important;
+  border-color: #333 !important;
+}
+.markdown-body th, .markdown-body td {
+  border: 1px solid #333 !important;
+  background-color: #1e1e1e !important;
+}
+</style>
 
 <p align="center">
   <img src="https://lh3.googleusercontent.com/d/1v19rzb-uwTJQdXsD9JFnu3CZT6tbBRk1?.png" width="96" height="96" alt="Logo">
