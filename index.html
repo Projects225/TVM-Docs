@@ -2,8 +2,9 @@
 <html lang="sk">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TVM Rules & Acronyms</title>
-    <!-- Načítanie knižnice Marked.js pre preklad Markdownu -->
+    <!-- Načítanie knižnice Marked.js -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.js"></script>
     <style>
         body {
@@ -34,21 +35,22 @@
         th {
             background-color: #1a1a1a;
         }
-        .text-center {
-            text-align: center;
-        }
         .img-center {
             display: block;
             margin: 0 auto;
             width: 96px;
             height: 96px;
         }
+        /* Skrytý zdrojový container */
+        #markdown-source {
+            display: none;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Tu je váš pôvodný obsah pripravený pre Markdown -->
-    <script id="markdown-source" type="text/markdown">
+    <!-- Zdrojový Markdown kód (skrytý) -->
+    <div id="markdown-source">
 <img src="https://lh3.googleusercontent.com/d/1v19rzb-uwTJQdXsD9JFnu3CZT6tbBRk1?.png" class="img-center" alt="Logo">
 
 <h1 align="center"><span style="color:white;">TVM 📕</span><span style="color:red;">Rules</span> <span style="color:white;">&</span> <span style="color:#11cf00;">Acronyms</span></h1>
@@ -103,21 +105,4 @@ Update: 30.10.2026
 | 📺 | **<span style="color:orange;">CW</span>** | **<span style="color:orange;">Currently Watching</span>** |
 | ♻️ | **<span style="color:#00ff00;">TN</span>** | **<span style="color:#00ff00;">Too New</span>** |
 | ♻️ | **<span style="color:#00ff00;">WP:</span>** | **<span style="color:#00ff00;">Watch Priority</span> <span style="color:#FF0000;">(Highest - 1 -</span> <span style="color:#FFA700;">2 -</span> <span style="color:#FFF400;">3 -</span> <span style="color:#A3FF00;">4 -</span> <span style="color:#2CBA00;">5 - Lowest)</span>** |
-| ♻️ | **<span style="color:#00ff00;">P-</span>** | **<span style="color:#00ff00;">Title is not on Prehraj.to</span>** |
-| ♻️ | **<span style="color:#00ff00;">R:</span>** | **<span style="color:#00ff00;">Release Date</span>** |
-| ♻️ | **<span style="color:#00ff00;">NFW</span>** | **<span style="color:#00ff00;">Not Fully Watched</span>** |
-| ♻️ | **<span style="color:#00ff00;">STF</span>** | **<span style="color:#00ff00;">Subtitle File/s</span>** |
-| ♻️ | **<span style="color:#00ff00;">No IMDB</span>** | **<span style="color:#00ff00;">Content is not on IMDB</span>** |
-| ♻️ | **<span style="color:#00ff00;">No CSFD</span>** | **<span style="color:#00ff00;">Content is not on CSFD</span>** |
-    </script>
-
-    <!-- Miesto, kde sa Markdown automaticky vykreslí -->
-    <div id="content"></div>
-
-    <script>
-        const markdownText = document.getElementById('markdown-source').innerHTML;
-        document.getElementById('content').innerHTML = marked.parse(markdownText);
-    </script>
-
-</body>
-</html>
+| ♻️ |
